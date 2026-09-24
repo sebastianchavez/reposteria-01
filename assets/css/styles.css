@@ -1,0 +1,434 @@
+/* =========================================================
+   Repostería - Estilos personalizados
+   Complementa a Tailwind (vía CDN)
+   ========================================================= */
+
+:root {
+  --rosa-pastel: #f8c8dc;
+  --rosa-fuerte: #e91e63;
+  --crema: #fff5e1;
+  --dorado: #d4a574;
+  --chocolate: #5d4037;
+  --chocolate-oscuro: #3e2723;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, sans-serif;
+  background-color: var(--crema);
+  color: var(--chocolate);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: "Playfair Display", "Georgia", serif;
+  letter-spacing: -0.01em;
+}
+
+/* =========================================================
+   Reveal Animations (IntersectionObserver)
+   Solo se ocultan si JS agrega la clase .reveal-init (sin ella, son visibles)
+   ========================================================= */
+.reveal {
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal-init {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.reveal.visible,
+.reveal-init.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+.reveal-left {
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal-left.reveal-init {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal-right.reveal-init {
+  opacity: 0;
+  transform: translateX(50px);
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* =========================================================
+   Navbar
+   ========================================================= */
+.navbar {
+  transition: all 0.3s ease;
+}
+.navbar.scrolled {
+  background-color: rgba(255, 245, 225, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(93, 64, 55, 0.08);
+}
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--rosa-fuerte);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+.nav-link.active {
+  color: var(--rosa-fuerte);
+}
+
+/* =========================================================
+   Botones
+   ========================================================= */
+.btn-primary {
+  background-color: var(--rosa-fuerte);
+  color: white;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(233, 30, 99, 0.3);
+}
+.btn-primary:hover {
+  background-color: #c2185b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(233, 30, 99, 0.45);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--chocolate);
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  border: 2px solid var(--chocolate);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  background-color: var(--chocolate);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 50;
+  background-color: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+}
+.btn-whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4), 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+}
+
+/* =========================================================
+   Cards y Hover Effects
+   ========================================================= */
+.card-hover {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(93, 64, 55, 0.15);
+}
+
+.img-hover-zoom {
+  overflow: hidden;
+}
+.img-hover-zoom img {
+  transition: transform 0.7s ease;
+}
+.img-hover-zoom:hover img {
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   Hero Animations
+   ========================================================= */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+@keyframes blob {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+.animate-fade-in {
+  animation: fadeIn 1.2s ease-out forwards;
+}
+.animate-slide-down {
+  animation: slideDown 0.6s ease-out forwards;
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+.animate-blob {
+  animation: blob 12s ease-in-out infinite;
+}
+.animation-delay-200 { animation-delay: 0.2s; opacity: 0; }
+.animation-delay-400 { animation-delay: 0.4s; opacity: 0; }
+.animation-delay-600 { animation-delay: 0.6s; opacity: 0; }
+.animation-delay-800 { animation-delay: 0.8s; opacity: 0; }
+
+/* =========================================================
+   Mobile Menu
+   ========================================================= */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 360px;
+  height: 100vh;
+  background-color: var(--crema);
+  z-index: 60;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -10px 0 30px rgba(93, 64, 55, 0.15);
+  overflow-y: auto;
+}
+.mobile-menu.open {
+  right: 0;
+}
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 55;
+}
+.mobile-menu-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* =========================================================
+   Galería - Lightbox
+   ========================================================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 70;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.lightbox.open {
+  display: flex;
+  animation: fadeIn 0.3s ease-out;
+}
+.lightbox img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================================
+   Filtros galería
+   ========================================================= */
+.filter-btn {
+  transition: all 0.3s ease;
+}
+.filter-btn.active {
+  background-color: var(--rosa-fuerte);
+  color: white;
+  border-color: var(--rosa-fuerte);
+}
+
+/* =========================================================
+   Pricing / Plans
+   ========================================================= */
+.pricing-card {
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.pricing-card.featured {
+  transform: scale(1.05);
+  border: 2px solid var(--rosa-fuerte);
+}
+.pricing-card.featured::before {
+  content: "Más popular";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--rosa-fuerte);
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* =========================================================
+   Clases - Schedule
+   ========================================================= */
+.class-card {
+  border-left: 4px solid var(--dorado);
+  transition: all 0.3s ease;
+}
+.class-card:hover {
+  border-left-color: var(--rosa-fuerte);
+  background-color: white;
+  transform: translateX(4px);
+}
+
+.day-pill {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: var(--rosa-pastel);
+  color: var(--chocolate-oscuro);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   Form
+   ========================================================= */
+.form-input {
+  background-color: white;
+  border: 2px solid #e5d4c1;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--rosa-fuerte);
+  box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.15);
+}
+
+/* =========================================================
+   Sección / Divisores decorativos
+   ========================================================= */
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--rosa-pastel), var(--dorado));
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+}
+
+/* =========================================================
+   Testimonios
+   ========================================================= */
+.testimonial-card {
+  position: relative;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(93, 64, 55, 0.06);
+}
+.testimonial-card::before {
+  content: "\201C";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-size: 5rem;
+  font-family: "Playfair Display", serif;
+  color: var(--rosa-pastel);
+  line-height: 1;
+}
+
+/* =========================================================
+   Counter Animation
+   ========================================================= */
+.counter-value {
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+details[open] summary .faq-icon {
+  transform: rotate(45deg);
+}
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+summary::-webkit-details-marker {
+  display: none;
+}

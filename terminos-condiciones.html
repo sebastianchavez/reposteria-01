@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Términos y condiciones para el uso de los servicios de Repostería Delicias." />
+  <title>Términos y condiciones — Repostería Delicias</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'rosa-pastel': '#F8C8DC',
+            'rosa-fuerte': '#E91E63',
+            'crema': '#FFF5E1',
+            'dorado': '#D4A574',
+            'chocolate': '#5D4037',
+            'chocolate-oscuro': '#3E2723'
+          },
+          fontFamily: { display: ['"Playfair Display"', 'serif'], body: ['Poppins', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=2" />
+</head>
+<body class="bg-crema text-chocolate">
+
+  <nav id="navbar" class="navbar fixed top-0 left-0 right-0 z-50 bg-crema">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-2 group">
+          <span class="text-3xl">🎂</span>
+          <div class="font-display text-2xl font-bold text-chocolate-oscuro leading-none">Repostería<span class="block text-sm font-body font-normal text-rosa-fuerte tracking-widest">DELICIAS</span></div>
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="nav-link text-chocolate font-medium" data-page="index.html">Inicio</a>
+          <a href="sobre-nosotros.html" class="nav-link text-chocolate font-medium" data-page="sobre-nosotros.html">Sobre nosotros</a>
+          <a href="servicios.html" class="nav-link text-chocolate font-medium" data-page="servicios.html">Servicios</a>
+          <a href="galeria.html" class="nav-link text-chocolate font-medium" data-page="galeria.html">Galería</a>
+          <a href="precios.html" class="nav-link text-chocolate font-medium" data-page="precios.html">Precios</a>
+          <a href="clases.html" class="nav-link text-chocolate font-medium" data-page="clases.html">Clases</a>
+          <a href="contacto.html" class="nav-link text-chocolate font-medium" data-page="contacto.html">Contacto</a>
+        </div>
+        <div class="hidden lg:flex items-center gap-3"><a href="contacto.html" class="btn-primary text-sm">Reservar</a></div>
+        <button id="menu-toggle" class="lg:hidden p-2 text-chocolate-oscuro" aria-label="Abrir menú">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+  <aside id="mobile-menu" class="mobile-menu">
+    <div class="p-6">
+      <div class="flex items-center justify-between mb-8">
+        <div class="font-display text-2xl font-bold text-chocolate-oscuro">Repostería Delicias</div>
+        <button id="menu-close" class="p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg></button>
+      </div>
+      <div class="flex flex-col gap-1">
+        <a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-rosa-pastel/30 font-medium">Inicio</a>
+        <a href="sobre-nosotros.html" class="block px-4 py-3 rounded-lg hover:bg-rosa-pastel/30 font-medium">Sobre nosotros</a>
+        <a href="servicios.html" class="block px-4 py-3 rounded-lg hover:bg-rosa-pastel/30 font-medium">Servicios</a>
+        <a href="galeria.html" class="block px-4 py-3 rounded-lg hover:bg-rosa-pastel/30 font-medium">Galería</a>
+        <a href="precios.html" class="block px-4 py-3 rounded-lg hover:bg-rosa-pastel/30 font-medium">Precios</a>
+        <a href="clases.html" class="block px-4 py-3 rounded-lg hover:bg-rosa-pastel/30 font-medium">Clases</a>
+        <a href="contacto.html" class="block px-4 py-3 rounded-lg hover:bg-rosa-pastel/30 font-medium">Contacto</a>
+      </div>
+      <a href="contacto.html" class="btn-primary mt-6 w-full justify-center">Reservar ahora</a>
+    </div>
+  </aside>
+
+  <!-- HERO -->
+  <section class="pt-40 pb-12 bg-gradient-to-br from-rosa-pastel/40 to-crema">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <span class="inline-block px-4 py-1 bg-white/60 text-chocolate-oscuro rounded-full text-sm font-medium mb-6">Documento legal</span>
+      <h1 class="font-display text-5xl lg:text-6xl font-bold text-chocolate-oscuro mb-6">Términos y <span class="text-rosa-fuerte italic">condiciones</span></h1>
+      <p class="text-lg text-chocolate/80 max-w-2xl mx-auto">Última actualización: Enero 2026. Al utilizar nuestros servicios aceptas los siguientes términos.</p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-8 reveal">
+
+        <div class="bg-crema rounded-2xl p-8">
+          <h2 class="font-display text-2xl font-bold text-chocolate-oscuro mb-4 flex items-center gap-3"><span class="text-3xl">1️⃣</span> Aceptación de los términos</h2>
+          <p class="text-chocolate/80 leading-relaxed">Al acceder y utilizar el sitio web de Repostería Delicias, así como al contratar cualquiera de nuestros servicios, aceptas cumplir y estar sujeto a los presentes términos y condiciones. Si no estás de acuerdo con alguno de estos términos, te pedimos no utilizar nuestros servicios.</p>
+        </div>
+
+        <div class="bg-crema rounded-2xl p-8">
+          <h2 class="font-display text-2xl font-bold text-chocolate-oscuro mb-4 flex items-center gap-3"><span class="text-3xl">2️⃣</span> Servicios ofrecidos</h2>
+          <p class="text-chocolate/80 leading-relaxed mb-3">Repostería Delicias ofrece los siguientes servicios:</p>
+          <ul class="list-disc list-inside text-chocolate/80 space-y-2 ml-4">
+            <li>Elaboración y venta de tortas, pasteles y productos de repostería</li>
+            <li>Servicio de mesas dulces y catering dulce</li>
+            <li>Clases y talleres de repostería</li>
+            <li>Asesoría en diseño de postres personalizados</li>
+          </ul>
+        </div>
+
+        <div class="bg-crema rounded-2xl p-8">
+          <h2 class="font-display text-2xl font-bold text-chocolate-oscuro mb-4 flex items-center gap-3"><span class="text-3xl">3️⃣</span> Pedidos y anticipos</h2>
+          <ul class="list-disc list-inside text-chocolate/80 space-y-2 ml-4">
+            <li>Los pedidos deben realizarse con al menos <strong>2 semanas de anticipación</strong> para tortas personalizadas.</li>
+            <li>Para bodas y eventos de +50 personas se requiere <strong>1 mes de anticipación</strong>.</li>
+            <li>Se requiere un anticipo del <strong>50%</strong> para confirmar el pedido.</li>
+            <li>El saldo restante se paga al momento de la entrega.</li>
+            <li>Los precios publicados pueden variar sin previo aviso; el precio confirmado es el de la cotización vigente.</li>
+          </ul>
+        </div>
+
+        <div class="bg-crema rounded-2xl p-8">
+          <h2 class="font-display text-2xl font-bold text-chocolate-oscuro mb-4 flex items-center gap-3"><span class="text-3xl">4️⃣</span> Cambios y cancelaciones</h2>
+          <ul class="list-disc list-inside text-chocolate/80 space-y-2 ml-4">
+            <li><strong>Cambios de diseño:</strong> permitidos según el plan contratado (ver Precios).</li>
+            <li><strong>Cambio de fecha:</strong> con al menos 7 días de anticipación, sujeto a disponibilidad.</li>
+            <li><strong>Cancelación con más de 15 días:</strong> reembolso del 80% del anticipo.</li>
+            <li><strong>Cancelación con menos de 15 días:</strong> no hay reembolso, pero se puede reagendar.</li>
+            <li><strong>Cancelación con menos de 48 horas:</strong> sin reembolso.</li>
+          </ul>
+        </div>
+
+        <div class="bg-crema rounded-2xl p-8">
+          <h2 class="font-display text-2xl font-bold text-chocolate-oscuro mb-4 flex items-center gap-3"><span class="text-3xl">5️⃣</span> Alergias y restricciones alimentarias</h2>
+          <p class="text-chocolate/80 leading-relaxed">Es responsabilidad del cliente informar sobre cualquier alergia o restricción alimentaria al momento de realizar el pedido. Repostería Delicias no se hace responsable por reacciones adversas si el cliente no notificó previamente la condición.</p>
+        </div>
+
+        <div class="bg-crema rounded-2xl p-8">
+          <h2 class="font-display text-2xl font-bold text-chocolate-oscuro mb-4 flex items-center gap-3"><span class="text-3xl">6️⃣</span> Entrega y montaje</h2>
+          <ul class="list-disc list-inside text-chocolate/80 space-y-2 ml-4">
+            <li>La entrega local está incluida según el plan contratado.</li>
+            <li>El cliente debe garantizar el acceso al lugar de entrega.</li>
+            <li>El montaje de mesas dulces incluye decoración básica; elementos adicionales se cotizan aparte.</li>
+            <li>Una vez entregada la torta, no nos hacemos responsable por su conservación o manipulación.</li>
+          </ul>
+        </div>
+
+        <div class="bg-crema rounded-2xl p-8">
+          <h2 class="font-display text-2xl font-bold text-chocolate-oscuro mb-4 flex items-center gap-3"><span class="text-3xl">7️⃣</span> Propiedad intelectual</h2>
+          <p class="text-chocolate/80 leading-relaxed mb-3">Todos los contenidos del sitio web son propiedad de Repostería Delicias:</p>
+          <ul class="list-disc list-inside text-chocolate/80 space-y-2 ml-4">
+            <li>Textos, imágenes, fotografías y diseños</li>
+            <li>Logos y marcas registradas</li>
+            <li>Recetas originales y técnicas</li>
+          </ul>
+          <p class="text-chocolate/80 leading-relaxed mt-3">Queda prohibida su reproducción total o parcial sin autorización escrita.</p>
+        </div>
+
+        <div class="bg-crema rounded-2xl p-8">
+          <h2 class="font-display text-2xl font-bold text-chocolate-oscuro mb-4 flex items-center gap-3"><span class="text-3xl">8️⃣</span> Limitación de responsabilidad</h2>
+          <p class="text-chocolate/80 leading-relaxed">Repostería Delicias no se hace responsable por:</p>
+          <ul class="list-disc list-inside text-chocolate/80 space-y-2 ml-4 mt-3">
+            <li>Daños causados por mal uso o conservación del producto después de la entrega</li>
+            <li>Demoras por causas de fuerza mayor (clima, tráfico, etc.)</li>
+            <li>Daños indirectos o lucro cesante</li>
+            <li>Información incorrecta proporcionada por el cliente</li>
+          </ul>
+        </div>
+
+        <div class="bg-crema rounded-2xl p-8">
+          <h2 class="font-display text-2xl font-bold text-chocolate-oscuro mb-4 flex items-center gap-3"><span class="text-3xl">9️⃣</span> Ley aplicable y jurisdicción</h2>
+          <p class="text-chocolate/80 leading-relaxed">Estos términos se rigen por las leyes vigentes en el país. Para cualquier controversia, las partes se someterán a los tribunales competentes de la ciudad, renunciando a cualquier otro fuero.</p>
+        </div>
+
+        <div class="bg-rosa-pastel/30 border-2 border-rosa-fuerte rounded-2xl p-8">
+          <h2 class="font-display text-2xl font-bold text-chocolate-oscuro mb-4">¿Tienes dudas sobre los términos?</h2>
+          <p class="text-chocolate/80 leading-relaxed mb-4">Estamos a tu disposición para aclarar cualquier punto antes de contratar nuestros servicios.</p>
+          <a href="contacto.html" class="btn-primary">Contactar</a>
+        </div>
+
+        <p class="text-sm text-chocolate/60 text-center mt-8">Repostería Delicias se reserva el derecho de modificar estos términos. Los cambios serán efectivos al publicarse en esta página.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-chocolate-oscuro text-crema pt-16 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-3xl">🎂</span>
+            <div class="font-display text-2xl font-bold leading-none">Repostería <span class="block text-sm font-body font-normal text-rosa-fuerte">DELICIAS</span></div>
+          </div>
+          <p class="text-crema/70 text-sm leading-relaxed mb-4">Endulzamos tus momentos especiales desde 2009.</p>
+          <div class="flex gap-3">
+            <a href="#" class="w-9 h-9 bg-rosa-pastel/20 hover:bg-rosa-fuerte rounded-full flex items-center justify-center transition">📷</a>
+            <a href="#" class="w-9 h-9 bg-rosa-pastel/20 hover:bg-rosa-fuerte rounded-full flex items-center justify-center transition">📘</a>
+            <a href="#" class="w-9 h-9 bg-rosa-pastel/20 hover:bg-rosa-fuerte rounded-full flex items-center justify-center transition">🎵</a>
+            <a href="#" class="w-9 h-9 bg-rosa-pastel/20 hover:bg-rosa-fuerte rounded-full flex items-center justify-center transition">📌</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-bold mb-4">Navegación</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="text-crema/70 hover:text-rosa-fuerte transition">Inicio</a></li>
+            <li><a href="sobre-nosotros.html" class="text-crema/70 hover:text-rosa-fuerte transition">Sobre nosotros</a></li>
+            <li><a href="servicios.html" class="text-crema/70 hover:text-rosa-fuerte transition">Servicios</a></li>
+            <li><a href="galeria.html" class="text-crema/70 hover:text-rosa-fuerte transition">Galería</a></li>
+            <li><a href="precios.html" class="text-crema/70 hover:text-rosa-fuerte transition">Precios</a></li>
+            <li><a href="clases.html" class="text-crema/70 hover:text-rosa-fuerte transition">Clases</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-bold mb-4">Legal</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="politicas-privacidad.html" class="text-crema/70 hover:text-rosa-fuerte transition">Políticas de privacidad</a></li>
+            <li><a href="terminos-condiciones.html" class="text-crema/70 hover:text-rosa-fuerte transition">Términos y condiciones</a></li>
+            <li><a href="contacto.html" class="text-crema/70 hover:text-rosa-fuerte transition">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-bold mb-4">Contacto</h3>
+          <ul class="space-y-2 text-sm text-crema/70">
+            <li>📍 Av. Dulce 123, Ciudad</li>
+            <li>📞 +52 123 456 7890</li>
+            <li>✉️ hola@reposteriadelicias.com</li>
+            <li>🕒 Lun-Vie 9:00-19:00<br />&nbsp;&nbsp;&nbsp;&nbsp;Sáb 9:00-14:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-crema/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-crema/60">
+        <p>© <span id="current-year"></span> Repostería Delicias. Todos los derechos reservados.</p>
+        <p>Hecho con 💕 y mucha azúcar</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/1234567890" class="btn-whatsapp-float" aria-label="WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+  </a>
+
+  <script src="assets/js/data.js?v=2"></script>
+  <script src="assets/js/main.js?v=2"></script>
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const o = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("visible"); o.unobserve(e.target); } }), { threshold: 0.05 });
+      reveals.forEach((el) => o.observe(el));
+    } else reveals.forEach((el) => el.classList.add("visible"));
+  </script>
+</body>
+</html>
