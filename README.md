@@ -100,9 +100,9 @@ El proyecto usa `https://picsum.photos/seed/xxx/ancho/alto` para imágenes place
 
 ### Información de contacto
 Buscar y reemplazar en todos los archivos HTML:
-- `+52 123 456 7890` → número real
-- `hola@reposteriadelicias.com` → email real
-- `Av. Dulce 123, Ciudad` → dirección real
+- `+56 9 1234 5678` → número real
+- `hola@reposteriadelicias.cl` → email real
+- `Providencia, Santiago, Chile` → dirección real
 - En `contacto.html`, ajustar coordenadas del iframe de OpenStreetMap
 
 ## 🧩 Estructura de cada página
@@ -183,3 +183,6 @@ Template de uso libre. Personalizar libremente para proyectos comerciales o pers
 ---
 
 💕 Hecho con cariño y mucha azúcar
+
+### Localización chilena
+Los planes y clases usan precios de ejemplo en pesos chilenos (CLP), sin decimales y con punto de miles. El teléfono +56 9, WhatsApp, correo .cl y ubicación de Providencia son datos de demostración: reemplázalos con los del negocio antes de publicar. El mapa muestra una referencia de la comuna, no una dirección comercial verificada.

@@ -12,19 +12,49 @@
   const menuClose = document.getElementById("menu-close");
 
   function openMenu() {
+    if (!mobileMenu) return;
+    mobileMenu.inert = false;
     if (mobileMenu) mobileMenu.classList.add("open");
     if (mobileOverlay) mobileOverlay.classList.add("open");
     document.body.style.overflow = "hidden";
+    if (menuToggle) menuToggle.setAttribute("aria-expanded", "true");
+    if (menuClose) menuClose.focus();
   }
   function closeMenu() {
+    const wasOpen = mobileMenu && mobileMenu.classList.contains("open");
+    if (wasOpen && menuToggle) menuToggle.focus();
+    if (mobileMenu) mobileMenu.inert = true;
     if (mobileMenu) mobileMenu.classList.remove("open");
     if (mobileOverlay) mobileOverlay.classList.remove("open");
     document.body.style.overflow = "";
+    if (menuToggle) menuToggle.setAttribute("aria-expanded", "false");
   }
 
   if (menuToggle) menuToggle.addEventListener("click", openMenu);
   if (menuClose) menuClose.addEventListener("click", closeMenu);
   if (mobileOverlay) mobileOverlay.addEventListener("click", closeMenu);
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+    document.addEventListener("keydown", (event) => {
+      if (!mobileMenu.classList.contains("open")) return;
+      if (event.key === "Escape") closeMenu();
+      if (event.key === "Tab") {
+        const controls = mobileMenu.querySelectorAll("a[href], button");
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
+    window.matchMedia("(min-width: 1280px)").addEventListener("change", (event) => {
+      if (event.matches && mobileMenu.classList.contains("open")) closeMenu();
+    });
+  }
 
   /* ---------- Navbar scroll effect ---------- */
   const navbar = document.getElementById("navbar");
@@ -107,7 +137,7 @@
             const tick = (now) => {
               const progress = Math.min((now - startTime) / duration, 1);
               const eased = 1 - Math.pow(1 - progress, 3);
-              el.textContent = Math.floor(eased * target).toLocaleString("es-ES") + suffix;
+              el.textContent = Math.floor(eased * target).toLocaleString("es-CL") + suffix;
               if (progress < 1) requestAnimationFrame(tick);
             };
             requestAnimationFrame(tick);

@@ -86,7 +86,7 @@ window.DATA = {
     {
       id: "basico",
       nombre: "Básico",
-      precio: 89,
+      precio: 89000,
       descripcion: "Ideal para reuniones pequeñas y eventos íntimos.",
       features: [
         "Torta para 15-20 personas",
@@ -100,7 +100,7 @@ window.DATA = {
     {
       id: "estandar",
       nombre: "Estándar",
-      precio: 189,
+      precio: 189000,
       descripcion: "El equilibrio perfecto entre calidad y precio.",
       features: [
         "Torta para 30-40 personas",
@@ -115,7 +115,7 @@ window.DATA = {
     {
       id: "premium",
       nombre: "Premium",
-      precio: 349,
+      precio: 349000,
       descripcion: "Para esos momentos que merecen lo mejor.",
       features: [
         "Torta para 50-80 personas",
@@ -154,7 +154,7 @@ window.DATA = {
       nombre: "Introducción a la Repostería",
       nivel: "Principiante",
       cupos: 8,
-      precio: 45,
+      precio: 45000,
       instructor: "Chef María Rodríguez"
     },
     {
@@ -164,7 +164,7 @@ window.DATA = {
       nombre: "Decoración con Buttercream",
       nivel: "Intermedio",
       cupos: 6,
-      precio: 60,
+      precio: 60000,
       instructor: "Chef Laura Pérez"
     },
     {
@@ -174,7 +174,7 @@ window.DATA = {
       nombre: "Tortas de Fondant",
       nivel: "Avanzado",
       cupos: 6,
-      precio: 75,
+      precio: 75000,
       instructor: "Chef Carlos Méndez"
     },
     {
@@ -184,7 +184,7 @@ window.DATA = {
       nombre: "Cupcakes Creativos",
       nivel: "Principiante",
       cupos: 10,
-      precio: 50,
+      precio: 50000,
       instructor: "Chef María Rodríguez"
     },
     {
@@ -194,7 +194,7 @@ window.DATA = {
       nombre: "Macarons Franceses",
       nivel: "Intermedio",
       cupos: 8,
-      precio: 65,
+      precio: 65000,
       instructor: "Chef Laura Pérez"
     },
     {
@@ -204,7 +204,7 @@ window.DATA = {
       nombre: "Chocolate y Modelado",
       nivel: "Avanzado",
       cupos: 6,
-      precio: 80,
+      precio: 80000,
       instructor: "Chef Carlos Méndez"
     },
     {
@@ -214,7 +214,7 @@ window.DATA = {
       nombre: "Panadería Artesanal",
       nivel: "Principiante",
       cupos: 10,
-      precio: 45,
+      precio: 45000,
       instructor: "Chef Ana Gómez"
     },
     {
@@ -224,7 +224,7 @@ window.DATA = {
       nombre: "Tortas Temáticas Infantiles",
       nivel: "Intermedio",
       cupos: 8,
-      precio: 70,
+      precio: 70000,
       instructor: "Chef María Rodríguez"
     },
     {
@@ -234,7 +234,7 @@ window.DATA = {
       nombre: "Postres Individuales",
       nivel: "Intermedio",
       cupos: 8,
-      precio: 65,
+      precio: 65000,
       instructor: "Chef Ana Gómez"
     },
     {
@@ -244,7 +244,7 @@ window.DATA = {
       nombre: "Pastelería Profesional",
       nivel: "Avanzado",
       cupos: 6,
-      precio: 90,
+      precio: 90000,
       instructor: "Chef Carlos Méndez"
     }
   ],
@@ -330,7 +330,7 @@ window.DATA = {
       respuesta: "¡Por supuesto! De hecho, esa es nuestra especialidad. Trabajamos contigo en cada detalle: colores, temática, sabores, rellenos, decoración. Solo cuéntanos tu visión."
     },
     {
-      pregunta: ¿Trabajan con personas con alergias alimentarias?",
+      pregunta: "¿Trabajan con personas con alergias alimentarias?",
       respuesta: "Sí, ofrecemos opciones sin gluten, sin lactosa y veganas. Es importante que nos informes sobre cualquier alergia al momento de hacer el pedido para tomar las precauciones necesarias."
     },
     {
